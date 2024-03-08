@@ -31,25 +31,25 @@ class MusicPlayer extends Thread {
         }
     }
 }
-
-public class Main {
-    public static void main(String[] args) {
-        // VideoPlayer와 MusicPlayer를 각각 생성하여 스레드로 실행
-        VideoPlayer videoThread = new VideoPlayer();
-        MusicPlayer musicThread = new MusicPlayer();
-
-        // 각각의 스레드 시작
-        videoThread.start();
-        musicThread.start();
-
-        // main 스레드에서 다른 스레드의 실행을 기다림
-        try {
-            videoThread.join();
-            musicThread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("메인 스레드 종료");
-    }
-}
+//
+//public class void Main {
+//    public static void main(String[] args) {
+//        // VideoPlayer와 MusicPlayer를 각각 생성하여 스레드로 실행
+//        VideoPlayer videoThread = new VideoPlayer();
+//        MusicPlayer musicThread = new MusicPlayer();
+//
+//        // 각각의 스레드 시작
+//        videoThread.start();
+//        musicThread.start();
+//
+//        // main 스레드에서 다른 스레드의 실행을 기다림
+//        try {
+//            videoThread.join();
+//            musicThread.join();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//
+//        System.out.println("메인 스레드 종료");
+//    }
+//}
